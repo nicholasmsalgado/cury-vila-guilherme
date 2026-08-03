@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residencial Amadeu | Breve Lançamento Vila Guilherme - Cury Construtora</title>
+  <meta name="description" content="Breve lançamento do Residencial Amadeu na Vila Guilherme, SP. Apartamentos de 2 dormitórios com opção de varanda, suíte e garden. Lazer completo e facilidades Minha Casa Minha Vida. Lançamento em 31/08/2026.">
+  
+  <!-- Open Graph / Meta Ads / Google Ads -->
+  <meta property="og:title" content="Residencial Amadeu - Vila Guilherme | Cury Construtora">
+  <meta property="og:description" content="Breve lançamento na Vila Guilherme. 2 Dorms com Lazer Clube. Subsídio Minha Casa Minha Vida de até R$ 55 mil.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Inter / Outfit (Títulos Neo-Grotescos) + Plus Jakarta Sans (Textos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-text">
+          <span class="brand-title">AMADEU</span>
+          <span class="brand-sub">VILA GUILHERME</span>
+        </div>
+      </a>
+      <nav class="nav-menu">
+        <a href="#plantas">Plantas</a>
+        <a href="#lazer">Lazer & Diferenciais</a>
+        <a href="#mcmv">Programa MCMV</a>
+        <a href="#localizacao">Localização</a>
+        <a href="#faq">Dúvidas (FAQ)</a>
+      </nav>
+      <div class="header-cta">
+        <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Residencial%20Amadeu%20Vila%20Guilherme%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20pr%C3%A9-lan%C3%A7amento." target="_blank" rel="noopener" class="btn btn-whatsapp-header">
+          <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-backdrop-overlay"></div>
+    <div class="container hero-grid">
+      
+      <!-- Hero Left: Headlines -->
+      <div class="hero-content">
+        <div class="tag-hero">
+          <i class="fa-solid fa-city text-navy"></i> BREVE LANÇAMENTO • CURY CONSTRUTORA
+        </div>
+        <h1 class="hero-title">
+          Apartamentos de 2 Dormitórios com <span class="highlight-green">Lazer Clube</span> na Vila Guilherme
+        </h1>
+        <p class="hero-description">
+          Conheça o <strong>Residencial Amadeu</strong>. Apartamentos modernos com opção de varanda, suíte e garden na Vila Guilherme. Aproveite as facilidades do programa <strong>Minha Casa Minha Vida</strong>, uso do FGTS e parcelamento de entrada.
+        </p>
+
+        <!-- Badges -->
+        <div class="hero-badges">
+          <div class="badge-item">
+            <i class="fa-solid fa-file-invoice-dollar text-green"></i>
+            <span>Subsídio do Governo*</span>
+          </div>
+          <div class="badge-item">
+            <i class="fa-solid fa-calendar-check text-green"></i>
+            <span>Entrada em até 60x*</span>
+          </div>
+          <div class="badge-item">
+            <i class="fa-solid fa-shield-halved text-green"></i>
+            <span>Use seu FGTS</span>
+          </div>
+        </div>
+
+        <!-- Hero Primary WhatsApp CTA -->
+        <div class="hero-cta-box margin-top-md">
+          <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Residencial%20Amadeu%20Vila%20Guilherme%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20pr%C3%A9-lan%C3%A7amento." target="_blank" rel="noopener" class="btn btn-hero-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Falar com Corretor no WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Right: Lead Capture Form -->
+      <div class="hero-form-wrapper" id="cadastro">
+        <div class="lead-form-card">
+          <div class="form-badge">PRÉ-CADASTRO</div>
+
+          <!-- Form Countdown Box (Acima do Título) -->
+          <div class="form-countdown-box">
+            <span class="form-countdown-label"><i class="fa-solid fa-stopwatch text-navy"></i> Lançamento oficial em:</span>
+            <div class="countdown-bar-timer form-timer" id="timer">
+              <div class="timer-pill-box">
+                <span class="timer-pill-value" id="days">00</span>
+                <span class="timer-pill-unit">DIAS</span>
+              </div>
+              <span class="timer-pill-colon">:</span>
+              <div class="timer-pill-box">
+                <span class="timer-pill-value" id="hours">00</span>
+                <span class="timer-pill-unit">HORAS</span>
+              </div>
+              <span class="timer-pill-colon">:</span>
+              <div class="timer-pill-box">
+                <span class="timer-pill-value" id="minutes">00</span>
+                <span class="timer-pill-unit">MIN</span>
+              </div>
+              <span class="timer-pill-colon">:</span>
+              <div class="timer-pill-box">
+                <span class="timer-pill-value" id="seconds">00</span>
+                <span class="timer-pill-unit">SEG</span>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="form-title">Receba Informações no Lançamento</h2>
+          <p class="form-subtitle">Preencha os dados abaixo para ser atendido por um corretor credenciado assim que o projeto for lançado.</p>
+
+          <form id="leadForm" class="capture-form">
+            <div class="form-group">
+              <label for="nome"><i class="fa-solid fa-id-card"></i> Nome Completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email"><i class="fa-solid fa-at"></i> E-mail principal</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp / Celular</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+            </div>
+
+            <div class="form-group">
+              <label for="horario"><i class="fa-solid fa-clock-three"></i> Melhor Horário para Contato</label>
+              <select id="horario" name="horario" required>
+                <option value="" disabled selected>Selecione um horário...</option>
+                <option value="Manhã (08h às 12h)">Manhã (08h às 12h)</option>
+                <option value="Tarde (12h às 18h)">Tarde (12h às 18h)</option>
+                <option value="Noite (18h às 21h)">Noite (18h às 21h)</option>
+                <option value="Qualquer Horário">Qualquer Horário</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-submit-whatsapp">
+              <span class="btn-text"><i class="fa-brands fa-whatsapp"></i> Quero Receber Informações no WhatsApp</span>
+              <i class="fa-solid fa-arrow-right btn-icon-arrow"></i>
+            </button>
+
+            <div class="form-security">
+              <i class="fa-solid fa-lock"></i> Seus dados estão seguros e sem spam.
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Quick Numbers Band -->
+  <section class="stats-band">
+    <div class="container text-center">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">4</span>
+          <span class="stat-label">Torres Exclusivas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">32 a 53<small>m²</small></span>
+          <span class="stat-label">Plantas 2 Dorms</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">+20</span>
+          <span class="stat-label">Itens de Lazer</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">7.414<small>m²</small></span>
+          <span class="stat-label">Área do Terreno</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipologias e Plantas (Com "EM BREVE") -->
+  <section class="section plants-section" id="plantas">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">OPÇÕES DE PLANTAS</span>
+        <h2 class="section-title">Plantas Inteligentes de 2 Dormitórios</h2>
+        <p class="section-desc">As imagens oficiais das plantas serão liberadas no lançamento (31/08/2026). Antecipe seu cadastro com a construtora.</p>
+      </div>
+
+      <div class="plants-grid">
+        
+        <div class="plant-card">
+          <div class="plant-badge">2 Dorms</div>
+          <div class="plant-visual coming-soon-visual">
+            <div class="coming-soon-pill"><i class="fa-solid fa-lock"></i> EM BREVE</div>
+            <p class="coming-soon-sub">Planta liberada no lançamento</p>
+            <span class="plant-meter">32m²</span>
+          </div>
+          <div class="plant-body">
+            <h3>2 Dormitórios Compacto</h3>
+            <p class="plant-specs"><i class="fa-solid fa-bed"></i> 2 Dorms • <i class="fa-solid fa-ruler-horizontal"></i> 32m²</p>
+            <p class="plant-desc">Excelente opção para sair do aluguel com parcelas acessíveis na Zona Norte.</p>
+            <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20da%20Planta%20de%2032m%C2%B2%20do%20Residencial%20Amadeu." target="_blank" rel="noopener" class="btn btn-outline-sm">
+              Tenho Interesse nesta Planta
+            </a>
+          </div>
+        </div>
+
+        <div class="plant-card highlight-card">
+          <div class="plant-badge badge-popular">Mais Procurada</div>
+          <div class="plant-visual coming-soon-visual">
+            <div class="coming-soon-pill"><i class="fa-solid fa-lock"></i> EM BREVE</div>
+            <p class="coming-soon-sub">Planta liberada no lançamento</p>
+            <span class="plant-meter">37m² a 38m²</span>
+          </div>
+          <div class="plant-body">
+            <h3>2 Dormitórios com Terraço</h3>
+            <p class="plant-specs"><i class="fa-solid fa-bed"></i> 2 Dorms • <i class="fa-solid fa-sun"></i> Com Terraço</p>
+            <p class="plant-desc">Excelente ventilação e iluminação natural com sacada aconchegante.</p>
+            <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20da%20Planta%20de%2037m%C2%B2%20com%20Terra%C3%A7o." target="_blank" rel="noopener" class="btn btn-primary-sm">
+              Tenho Interesse nesta Planta
+            </a>
+          </div>
+        </div>
+
+        <div class="plant-card">
+          <div class="plant-badge">2 Dorms + Suíte</div>
+          <div class="plant-visual coming-soon-visual">
+            <div class="coming-soon-pill"><i class="fa-solid fa-lock"></i> EM BREVE</div>
+            <p class="coming-soon-sub">Planta liberada no lançamento</p>
+            <span class="plant-meter">42m² a 45m²</span>
+          </div>
+          <div class="plant-body">
+            <h3>2 Dorms com Suíte e Terraço</h3>
+            <p class="plant-specs"><i class="fa-solid fa-bed"></i> 2 Dorms (1 Suíte) • <i class="fa-solid fa-bath"></i> Suíte Privativa</p>
+            <p class="plant-desc">Conforto com suíte privativa, bancadas em granito e infraestrutura para ar-condicionado.</p>
+            <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20da%20Planta%20de%2042m%C2%B2%20com%20Su%C3%ADte." target="_blank" rel="noopener" class="btn btn-outline-sm">
+              Tenho Interesse nesta Planta
+            </a>
+          </div>
+        </div>
+
+        <div class="plant-card">
+          <div class="plant-badge badge-garden">Garden Especial</div>
+          <div class="plant-visual coming-soon-visual">
+            <div class="coming-soon-pill"><i class="fa-solid fa-lock"></i> EM BREVE</div>
+            <p class="coming-soon-sub">Planta liberada no lançamento</p>
+            <span class="plant-meter">49m² a 53m²</span>
+          </div>
+          <div class="plant-body">
+            <h3>2 Dorms com Garden (Quintal)</h3>
+            <p class="plant-specs"><i class="fa-solid fa-bed"></i> 2 Dorms • <i class="fa-solid fa-tree"></i> Quintal Privativo</p>
+            <p class="plant-desc">Espaço externo exclusivo para pets, crianças e momentos ao ar livre.</p>
+            <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20da%20Planta%20Garden." target="_blank" rel="noopener" class="btn btn-outline-sm">
+              Tenho Interesse nesta Planta
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lazer & Diferenciais (Seção Mesclada e Enxuta) -->
+  <section class="section leisure-section bg-alt" id="lazer">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">LAZER & DIFERENCIAIS</span>
+        <h2 class="section-title">Estrutura Completa de Clube & Acabamentos</h2>
+        <p class="section-desc">Entregue equipado e decorado pela Cury Construtora.</p>
+      </div>
+
+      <div class="leisure-merged-grid">
+        
+        <!-- Lazer Highlights -->
+        <div class="leisure-card-box">
+          <h3 class="box-title"><i class="fa-solid fa-water-ladder text-navy"></i> Lazer Completo (+20 itens)</h3>
+          <ul class="compact-check-list">
+            <li><i class="fa-solid fa-table-tennis-paddle-ball text-green"></i> Quadra de Beach Tennis & Mini Quadra</li>
+            <li><i class="fa-solid fa-person-swimming text-green"></i> Piscinas Adulto com Deck & Infantil</li>
+            <li><i class="fa-solid fa-utensils text-green"></i> Salão de Festas, Sport Bar & Churrasqueira</li>
+            <li><i class="fa-solid fa-dumbbell text-green"></i> Academia Fitness & Calistenia Externa</li>
+            <li><i class="fa-solid fa-laptop-house text-green"></i> Coworking, Brinquedoteca & Playground</li>
+            <li><i class="fa-solid fa-dog text-green"></i> Pet Place & Pet Care</li>
+            <li><i class="fa-solid fa-cart-shopping text-green"></i> Easy Market (Mercado 24h) & Lavanderia</li>
+          </ul>
+          <div class="margin-top-md">
+            <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20estrutura%20de%20Lazer%20do%20Residencial%20Amadeu." target="_blank" rel="noopener" class="btn btn-card-navy">
+              <i class="fa-brands fa-whatsapp"></i> Falar sobre Lazer no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Diferenciais Construtivos -->
+        <div class="leisure-card-box">
+          <h3 class="box-title"><i class="fa-solid fa-compass-drafting text-navy"></i> Diferenciais do Imóvel</h3>
+          <ul class="compact-check-list">
+            <li><i class="fa-solid fa-layer-group text-green"></i> Piso laminado entregue nos dormitórios</li>
+            <li><i class="fa-solid fa-sliders text-green"></i> Persianas de enrolar nos quartos</li>
+            <li><i class="fa-solid fa-wind text-green"></i> Infraestrutura para Ar Condicionado</li>
+            <li><i class="fa-solid fa-sink text-green"></i> Bancadas em granito nas unidades com suíte</li>
+            <li><i class="fa-solid fa-droplet text-green"></i> Bacias com duplo acionamento (economia de água)</li>
+            <li><i class="fa-solid fa-faucet-drip text-green"></i> Arejadores de alta eficiência nas torneiras</li>
+          </ul>
+          <div class="margin-top-md">
+            <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20Diferenciais%20e%20Acabamentos%20do%20Residencial%20Amadeu." target="_blank" rel="noopener" class="btn btn-card-navy">
+              <i class="fa-brands fa-whatsapp"></i> Falar sobre Acabamentos no WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MCMV (Seção Aberta em Grid 2x2) -->
+  <section class="section mcmv-section" id="mcmv">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">PROGRAMA SOCIAL MCMV</span>
+        <h2 class="section-title">Minha Casa Minha Vida na Vila Guilherme</h2>
+        <p class="section-desc">Conquiste seu imóvel com o programa do governo: subsídio garantido, entrada facilitada e uso do FGTS.</p>
+      </div>
+
+      <div class="mcmv-open-grid">
+        
+        <div class="mcmv-card">
+          <div class="mcmv-card-top">
+            <div class="mcmv-icon-box"><i class="fa-solid fa-hand-holding-dollar text-navy"></i></div>
+            <span class="mcmv-num">01</span>
+          </div>
+          <h3>Subsídio do Governo (MCMV)</h3>
+          <p>Desconto direto do governo concedido no valor final do seu imóvel segundo a faixa de renda familiar.</p>
+        </div>
+
+        <div class="mcmv-card">
+          <div class="mcmv-card-top">
+            <div class="mcmv-icon-box"><i class="fa-solid fa-vault text-green"></i></div>
+            <span class="mcmv-num">02</span>
+          </div>
+          <h3>Uso do Saldo do FGTS</h3>
+          <p>Utilize o saldo acumulado no seu FGTS como parte do pagamento da entrada ou amortização do saldo devedor.</p>
+        </div>
+
+        <div class="mcmv-card">
+          <div class="mcmv-card-top">
+            <div class="mcmv-icon-box"><i class="fa-solid fa-receipt text-navy"></i></div>
+            <span class="mcmv-num">03</span>
+          </div>
+          <h3>Entrada Parcelada em até 60x</h3>
+          <p>Facilidade de pagamento com parcelamento da entrada direto com a Cury Construtora.</p>
+        </div>
+
+        <div class="mcmv-card">
+          <div class="mcmv-card-top">
+            <div class="mcmv-icon-box"><i class="fa-solid fa-people-roof text-green"></i></div>
+            <span class="mcmv-num">04</span>
+          </div>
+          <h3>Composição de Renda Familiar</h3>
+          <p>Soma de renda permitida com até 3 pessoas (cônjuge, familiares, amigos ou noivos) para aprovar o crédito.</p>
+        </div>
+
+      </div>
+
+      <div class="mcmv-cta text-center margin-top-lg">
+        <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20gratuita%20de%20financiamento%20Minha%20Casa%20Minha%20Vida%20para%20o%20Residencial%20Amadeu." target="_blank" rel="noopener" class="btn btn-gold-lg">
+          <i class="fa-solid fa-calculator"></i> Simular Financiamento no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização Privilegiada -->
+  <section class="section location-section" id="localizacao">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">LOCALIZAÇÃO PRIVILEGIADA</span>
+        <h2 class="section-title">Morar na Vila Guilherme é Ter Tudo Perto</h2>
+        <p class="section-desc">Vila Guilherme / SP • Praticidade no seu dia a dia a poucos minutos de casa.</p>
+      </div>
+
+      <div class="location-distances-grid">
+        <div class="distance-card">
+          <div class="distance-icon"><i class="fa-solid fa-bag-shopping text-navy"></i></div>
+          <div class="distance-info">
+            <h4>Shopping D</h4>
+            <span class="distance-badge badge-car"><i class="fa-solid fa-car"></i> 10 min de carro</span>
+          </div>
+        </div>
+
+        <div class="distance-card">
+          <div class="distance-icon"><i class="fa-solid fa-store text-navy"></i></div>
+          <div class="distance-info">
+            <h4>Shopping Center Norte</h4>
+            <span class="distance-badge badge-car"><i class="fa-solid fa-car"></i> 10 min de carro</span>
+          </div>
+        </div>
+
+        <div class="distance-card">
+          <div class="distance-icon"><i class="fa-solid fa-graduation-cap text-green"></i></div>
+          <div class="distance-info">
+            <h4>UNINOVE - Campus Vila Maria</h4>
+            <span class="distance-badge badge-walk"><i class="fa-solid fa-shoe-prints"></i> 14 min a pé</span>
+          </div>
+        </div>
+
+        <div class="distance-card">
+          <div class="distance-icon"><i class="fa-solid fa-tree text-green"></i></div>
+          <div class="distance-info">
+            <h4>Parque do Trote</h4>
+            <span class="distance-badge badge-walk"><i class="fa-solid fa-shoe-prints"></i> 15 min a pé</span>
+          </div>
+        </div>
+
+        <div class="distance-card">
+          <div class="distance-icon"><i class="fa-solid fa-train-subway text-navy"></i></div>
+          <div class="distance-info">
+            <h4>Rodoviária Tietê / Metrô</h4>
+            <span class="distance-badge badge-car"><i class="fa-solid fa-car"></i> 6 min de carro</span>
+          </div>
+        </div>
+
+        <div class="distance-card">
+          <div class="distance-icon"><i class="fa-solid fa-cart-flatbed text-green"></i></div>
+          <div class="distance-info">
+            <h4>Atacadão - Vila Guilherme</h4>
+            <span class="distance-badge badge-walk"><i class="fa-solid fa-shoe-prints"></i> 14 min a pé</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chamada para saber mais -->
+      <div class="location-callout text-center">
+        <p class="callout-text"><i class="fa-solid fa-map-location-dot text-navy"></i> Quer saber o que mais tem perto do Residencial Amadeu?</p>
+        <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20o%20mapa%20e%20a%20localiza%C3%A7%C3%A3o%20completa%20do%20Residencial%20Amadeu." target="_blank" rel="noopener" class="btn btn-outline-sm btn-location-callout">
+          <i class="fa-brands fa-whatsapp"></i> Consultar Mapa Completo no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section bg-alt" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">DÚVIDAS FREQUENTES</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quando é o lançamento oficial?</span>
+            <i class="fa-solid fa-angle-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>O lançamento oficial é dia <strong>31 de Agosto de 2026</strong>. Quem se cadastra no pré-lançamento garante prioridade na escolha da unidade e tabela de abertura.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funciona a análise de crédito Caixa?</span>
+            <i class="fa-solid fa-angle-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>A análise avalia sua renda familiar (que pode ser composta por até 3 pessoas). Documentos necessários: RG/CPF, Comprovante de Residência e Comprovante de Renda (últimos 3 meses).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Posso usar meu FGTS?</span>
+            <i class="fa-solid fa-angle-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! Seu saldo de FGTS pode ser utilizado como entrada ou para amortizar o financiamento pela Caixa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quem pode compor a renda familiar no Minha Casa Minha Vida?</span>
+            <i class="fa-solid fa-angle-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Você pode somar a renda familiar com até 3 pessoas, sejam elas cônjuge, parentes (pais, filhos, irmãos) ou até mesmo amigos e noivos.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funciona o subsídio do programa Minha Casa Minha Vida?</span>
+            <i class="fa-solid fa-angle-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>O programa Minha Casa Minha Vida concede um desconto direto no valor do imóvel de acordo com a faixa de renda familiar aprovada na análise de crédito Caixa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O condomínio terá infraestrutura de segurança?</span>
+            <i class="fa-solid fa-angle-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! O Residencial Amadeu será entregue com portaria 24 horas, controle de acesso e todas as áreas sociais equipadas e decoradas pela Cury Construtora.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funciona o parcelamento da entrada?</span>
+            <i class="fa-solid fa-angle-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>A entrada pode ser parcelada direto com a construtora em até <strong>60 vezes*</strong>, facilitando o planejamento financeiro até a entrega das chaves.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Discreet WhatsApp Callout -->
+      <div class="faq-discreet-box text-center margin-top-md">
+        <p class="faq-discreet-text">
+          Ainda ficou com alguma dúvida? 
+          <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Estou%20na%20se%C3%A7%C3%A3o%20de%20d%C3%BAvidas%20do%20site%20do%20Residencial%20Amadeu%20e%20gostaria%20de%20esclarecer%20uma%20pergunta." target="_blank" rel="noopener" class="faq-inline-link">
+            <i class="fa-brands fa-whatsapp"></i> Falar com o corretor no WhatsApp
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sticky Mobile Bar -->
+  <div class="sticky-mobile-bar">
+    <a href="#cadastro" class="mobile-bar-btn btn-sec">
+      <i class="fa-solid fa-pen"></i> Cadastrar
+    </a>
+    <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Residencial%20Amadeu%20Vila%20Guilherme%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20pr%C3%A9-lan%C3%A7amento." id="mobileWhatsappBtn" target="_blank" rel="noopener" class="mobile-bar-btn btn-wa">
+      <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
