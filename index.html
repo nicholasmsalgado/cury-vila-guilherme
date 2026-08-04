@@ -16,18 +16,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-  <!-- Preload Critical WOFF2 Font Files to Eliminate Font-Display Delay -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Critical Above-the-Fold CSS (Zero Unused CSS Blocking) -->
+  <style>
+    :root {
+      --clr-bg-page: #FFFFFF;
+      --clr-brand-navy: #0F2C59;
+      --clr-primary-green: #15803D;
+      --clr-text-main: #0F172A;
+      --clr-text-muted: #475569;
+      --clr-border: #E2E8F0;
+      --ff-heading: 'Inter', 'Outfit', sans-serif;
+      --ff-body: 'Plus Jakarta Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--ff-body); color: var(--clr-text-main); background: #FFFFFF; margin: 0; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    *, *::before, *::after { box-sizing: border-box; }
+    .main-header { position: sticky; top: 0; z-index: 1000; background: #FFFFFF; border-bottom: 1px solid #E2E8F0; padding: 0.9rem 0; min-height: 72px; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+    .hero-section { padding: 2.5rem 0 3.5rem; background: #FFFFFF; min-height: 520px; }
+  </style>
 
-  <!-- Preload Critical Local CSS to Break Critical Request Chain -->
-  <link rel="preload" href="styles.css" as="style">
+  <!-- Primary Stylesheet -->
   <link rel="stylesheet" href="styles.css">
-  
-  <!-- Non-render-blocking External Stylesheets (Google Fonts & FontAwesome) -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=optional" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'" crossorigin="anonymous" referrerpolicy="no-referrer">
-  
+
+  <!-- Async Deferred Font & Icon Stylesheets (Eliminates Unused CSS Warning) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Outfit:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=optional">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
