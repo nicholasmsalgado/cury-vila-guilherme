@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
   }
 
-  updateCountdown();
+  requestAnimationFrame(updateCountdown);
   setInterval(updateCountdown, 1000);
 
   // 2. PHONE / WHATSAPP INPUT MASK
