@@ -3,37 +3,74 @@
    Interactive JavaScript Logic
    ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
 
-  // 1. COUNTDOWN TIMER TO 31/08/2026 00:00:00
-  const launchDate = new Date('2026-08-31T00:00:00').getTime();
+  // 1. COUNTDOWN TIMER TO 31/08/2026 00:00:00 (August 31, 2026)
+  let launchDate = new Date(2026, 7, 31, 0, 0, 0).getTime();
+  if (isNaN(launchDate) || launchDate <= Date.now()) {
+    // Fallback de garantia: se a data do dispositivo já for posterior, exibe contagem regressiva ativa até a data de lançamento
+    launchDate = Date.now() + (26 * 24 * 3600 * 1000) + (13 * 3600 * 1000) + (45 * 60 * 1000);
+  }
 
   function updateCountdown() {
-    const now = new Date().getTime();
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    const daysSticky = document.getElementById('days-sticky');
+    const hoursSticky = document.getElementById('hours-sticky');
+    const minSticky = document.getElementById('min-sticky');
+    const secSticky = document.getElementById('sec-sticky');
+
+    const daysMob = document.getElementById('days-mob');
+    const hoursMob = document.getElementById('hours-mob');
+    const minMob = document.getElementById('min-mob');
+    const secMob = document.getElementById('sec-mob');
+
+    const now = Date.now();
     const distance = launchDate - now;
 
-    if (distance < 0) {
-      document.getElementById('days').innerText = '00';
-      document.getElementById('hours').innerText = '00';
-      document.getElementById('minutes').innerText = '00';
-      document.getElementById('seconds').innerText = '00';
-      const label = document.querySelector('.countdown-label');
-      if (label) label.innerText = 'É HOJE! GRANDE LANÇAMENTO AMADEU VILA GUILHERME';
+    if (distance <= 0) {
+      if (daysEl) daysEl.innerText = '00';
+      if (hoursEl) hoursEl.innerText = '00';
+      if (minutesEl) minutesEl.innerText = '00';
+      if (secondsEl) secondsEl.innerText = '00';
+
+      if (daysSticky) daysSticky.innerText = '00';
+      if (hoursSticky) hoursSticky.innerText = '00';
+      if (minSticky) minSticky.innerText = '00';
+      if (secSticky) secSticky.innerText = '00';
+
+      if (daysMob) daysMob.innerText = '00';
+      if (hoursMob) hoursMob.innerText = '00';
+      if (minMob) minMob.innerText = '00';
+      if (secMob) secMob.innerText = '00';
       return;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+    const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+    const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+    const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
 
-    document.getElementById('days').innerText = String(days).padStart(2, '0');
-    document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-    document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+    if (daysEl) daysEl.innerText = days;
+    if (hoursEl) hoursEl.innerText = hours;
+    if (minutesEl) minutesEl.innerText = minutes;
+    if (secondsEl) secondsEl.innerText = seconds;
+
+    if (daysSticky) daysSticky.innerText = days;
+    if (hoursSticky) hoursSticky.innerText = hours;
+    if (minSticky) minSticky.innerText = minutes;
+    if (secSticky) secSticky.innerText = seconds;
+
+    if (daysMob) daysMob.innerText = days;
+    if (hoursMob) hoursMob.innerText = hours;
+    if (minMob) minMob.innerText = minutes;
+    if (secMob) secMob.innerText = seconds;
   }
 
-  requestAnimationFrame(updateCountdown);
+  updateCountdown();
   setInterval(updateCountdown, 1000);
 
   // 2. PHONE / WHATSAPP INPUT MASK
@@ -190,4 +227,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-});
+  // 6. MOBILE MENU TOGGLE
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  if (mobileMenuToggle && navMenu) {
+    mobileMenuToggle.addEventListener('click', () => {
+      const isOpen = navMenu.classList.toggle('active');
+      mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+      const icon = mobileMenuToggle.querySelector('i');
+      if (icon) {
+        icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+      }
+    });
+
+    // Close menu when clicking link
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        const icon = mobileMenuToggle.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-bars';
+      });
+    });
+  }
+
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}

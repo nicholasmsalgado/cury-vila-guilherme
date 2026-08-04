@@ -36,6 +36,9 @@
     .hero-section { padding: 2.5rem 0 3.5rem; background: #FFFFFF; min-height: 520px; }
   </style>
 
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
   <!-- Non-Render-Blocking Stylesheet Loading (Zero Render-Blocking Resources) -->
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
@@ -57,7 +60,7 @@
           <span class="brand-sub">VILA GUILHERME</span>
         </div>
       </a>
-      <nav class="nav-menu">
+      <nav class="nav-menu" id="navMenu">
         <a href="#plantas">Plantas</a>
         <a href="#lazer">Lazer & Diferenciais</a>
         <a href="#mcmv">Programa MCMV</a>
@@ -66,11 +69,55 @@
       </nav>
       <div class="header-cta">
         <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Residencial%20Amadeu%20Vila%20Guilherme%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20pr%C3%A9-lan%C3%A7amento." target="_blank" rel="noopener" class="btn btn-whatsapp-header">
-          <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+          <i class="fa-brands fa-whatsapp"></i> <span class="whatsapp-btn-text">Falar no WhatsApp</span>
         </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Sticky Top Countdown Bar -->
+  <div class="sticky-countdown-bar">
+    <div class="container countdown-bar-container">
+      <div class="sticky-timer-label">
+        <i class="fa-solid fa-stopwatch text-gold"></i> <span class="label-text">Lançamento:</span>
+      </div>
+      
+      <!-- Full timer for desktop -->
+      <div class="countdown-bar-timer sticky-timer desktop-only-timer" id="timerSticky">
+        <div class="timer-pill-box sm">
+          <span class="timer-pill-value" id="days-sticky">00</span>
+          <span class="timer-pill-unit">DIAS</span>
+        </div>
+        <span class="timer-pill-colon">:</span>
+        <div class="timer-pill-box sm">
+          <span class="timer-pill-value" id="hours-sticky">00</span>
+          <span class="timer-pill-unit">HORAS</span>
+        </div>
+        <span class="timer-pill-colon">:</span>
+        <div class="timer-pill-box sm">
+          <span class="timer-pill-value" id="min-sticky">00</span>
+          <span class="timer-pill-unit">MIN</span>
+        </div>
+        <span class="timer-pill-colon">:</span>
+        <div class="timer-pill-box sm">
+          <span class="timer-pill-value" id="sec-sticky">00</span>
+          <span class="timer-pill-unit">SEG</span>
+        </div>
+      </div>
+
+      <!-- Compact single-line timer for mobile -->
+      <div class="mobile-compact-timer">
+        <span id="days-mob">00</span>d : <span id="hours-mob">00</span>h : <span id="min-mob">00</span>m : <span id="sec-mob">00</span>s
+      </div>
+
+      <a href="#cadastro" class="btn btn-sticky-cta">
+        <i class="fa-solid fa-pen"></i> Cadastrar
+      </a>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero-section">
@@ -83,7 +130,7 @@
           <i class="fa-solid fa-city text-navy"></i> BREVE LANÇAMENTO • CURY CONSTRUTORA
         </div>
         <h1 class="hero-title">
-          Apartamentos de 2 Dormitórios com <span class="highlight-green">Lazer Clube</span> na Vila Guilherme
+          Apartamentos de 2&nbsp;Dormitórios com <span class="highlight-green">Lazer Clube</span> na Vila Guilherme
         </h1>
         <p class="hero-description">
           Conheça o <strong>Residencial Amadeu</strong>. Apartamentos modernos com opção de varanda, suíte e garden na Vila Guilherme. Aproveite as facilidades do programa <strong>Minha Casa Minha Vida</strong>, uso do FGTS e parcelamento de entrada.
@@ -570,15 +617,6 @@
     </div>
   </section>
 
-  <!-- Sticky Mobile Bar -->
-  <div class="sticky-mobile-bar">
-    <a href="#cadastro" class="mobile-bar-btn btn-sec">
-      <i class="fa-solid fa-pen"></i> Cadastrar
-    </a>
-    <a href="https://wa.me/5511987689734?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Residencial%20Amadeu%20Vila%20Guilherme%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20pr%C3%A9-lan%C3%A7amento." id="mobileWhatsappBtn" target="_blank" rel="noopener" class="mobile-bar-btn btn-wa">
-      <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
-    </a>
-  </div>
 
   <script src="script.js" defer></script>
 </body>

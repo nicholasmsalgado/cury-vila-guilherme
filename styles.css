@@ -67,6 +67,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Font Display Optional & Font Metric Overrides for Mobile Layout Shift Prevention */
@@ -124,6 +126,8 @@ html {
 .fa-map-location-dot::before { content: "\f5a0"; }
 .fa-angle-down::before { content: "\f107"; }
 .fa-pen::before { content: "\f304"; }
+.fa-bars::before { content: "\f0c9"; }
+.fa-xmark::before { content: "\f00d"; }
 
 /* Zero CLS - Layout Shift Prevention & Icon Reservations */
 i.fa-solid, i.fa-regular, i.fa-brands, .fa {
@@ -143,6 +147,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 img {
@@ -362,17 +368,95 @@ h1, h2, h3, h4 {
   gap: 0.3rem;
 }
 
-/* 6. Header */
+/* 6. Header & Sticky Top Bar */
 .main-header {
   background-color: var(--clr-bg-page);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
   border-bottom: 1px solid var(--clr-border);
-  padding: 0.9rem 0;
+  padding: 0.75rem 0;
   box-shadow: var(--shadow-sm);
-  min-height: 72px;
-  contain: layout style;
+  min-height: 68px;
+}
+
+body {
+  padding-top: 124px;
+}
+
+.sticky-countdown-bar {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--clr-brand-navy);
+  color: #FFFFFF;
+  padding: 0.65rem 0;
+  box-shadow: 0 4px 12px rgba(15, 44, 89, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.countdown-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sticky-timer-label {
+  font-family: var(--ff-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.sticky-timer .timer-pill-box.sm {
+  background-color: rgba(255, 255, 255, 0.15);
+  min-width: 42px;
+  height: 38px;
+  padding: 0.2rem 0.35rem;
+  border-radius: 0.4rem;
+}
+
+.sticky-timer .timer-pill-value {
+  font-size: 0.95rem;
+}
+
+.sticky-timer .timer-pill-unit {
+  font-size: 0.5rem;
+  opacity: 0.85;
+}
+
+.sticky-timer .timer-pill-colon {
+  color: #FFFFFF;
+  font-size: 1rem;
+  height: 38px;
+}
+
+.btn-sticky-cta {
+  background-color: var(--clr-primary-green);
+  color: #FFFFFF;
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  border-radius: 2rem;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+.mobile-compact-timer {
+  display: none;
 }
 
 .header-container {
@@ -439,6 +523,31 @@ h1, h2, h3, h4 {
   color: var(--clr-brand-orange);
 }
 
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: #F1F5F9;
+  border: 1.5px solid var(--clr-border);
+  border-radius: 0.6rem;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--clr-brand-navy);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.mobile-menu-toggle:hover {
+  background-color: #E2E8F0;
+}
+
 /* 7. Form Countdown Box (Integrado no Formulário) */
 .form-countdown-box {
   background: transparent;
@@ -449,12 +558,15 @@ h1, h2, h3, h4 {
 }
 
 .form-countdown-label {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
   font-family: var(--ff-heading);
   font-size: 0.88rem;
   font-weight: 800;
   color: var(--clr-text-main);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -469,12 +581,15 @@ h1, h2, h3, h4 {
 .timer-pill-box {
   background: var(--clr-brand-navy);
   border-radius: 0.5rem;
-  padding: 0.35rem 0.6rem;
-  min-width: 54px;
-  min-height: 44px;
-  text-align: center;
+  padding: 0.35rem 0.5rem;
+  min-width: 56px;
+  height: 48px;
   box-shadow: var(--shadow-sm);
   font-variant-numeric: tabular-nums;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .timer-pill-value {
@@ -485,6 +600,7 @@ h1, h2, h3, h4 {
   color: #FFFFFF;
   line-height: 1;
   font-variant-numeric: tabular-nums;
+  text-align: center;
 }
 
 .timer-pill-unit {
@@ -493,6 +609,8 @@ h1, h2, h3, h4 {
   color: rgba(255, 255, 255, 0.9);
   display: block;
   margin-top: 2px;
+  line-height: 1;
+  text-align: center;
 }
 
 .timer-pill-colon {
@@ -500,6 +618,11 @@ h1, h2, h3, h4 {
   font-size: 1.2rem;
   font-weight: 900;
   color: var(--clr-brand-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  line-height: 1;
 }
 
 /* 8. Hero Section (Unified Single Color Theme) */
@@ -609,12 +732,14 @@ h1, h2, h3, h4 {
   color: var(--clr-text-main);
   margin-bottom: 0.4rem;
   letter-spacing: -0.02em;
+  text-align: center;
 }
 
 .form-subtitle {
   font-size: 0.92rem;
   color: var(--clr-text-muted);
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .form-group {
@@ -1519,17 +1644,52 @@ h1, h2, h3, h4 {
 
 /* Tablet & Smaller Laptops (max-width: 992px) */
 @media (max-width: 992px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  
-  .hero-title {
-    font-size: 2.4rem;
+  .mobile-menu-toggle {
+    display: flex;
   }
 
   .nav-menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1.5rem;
+    gap: 0.85rem;
+    border-bottom: 2px solid var(--clr-border);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 0.75rem 1rem;
+    font-size: 1.05rem;
+    border-radius: 0.5rem;
+    background-color: #F8FAFC;
+    color: var(--clr-brand-navy);
+    font-weight: 800;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-menu a:hover {
+    background-color: #F1F5F9;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
   }
 
   .plants-grid {
@@ -1547,63 +1707,149 @@ h1, h2, h3, h4 {
 
 /* Smartphones & Small Tablets (max-width: 768px) */
 @media (max-width: 768px) {
+  .sticky-countdown-bar {
+    display: block !important;
+    top: 60px;
+    padding: 0.6rem 0;
+  }
+
+  body {
+    padding-top: 104px;
+  }
+
+  .countdown-bar-container {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .desktop-only-timer,
+  .btn-sticky-cta {
+    display: none !important;
+  }
+
+  .mobile-compact-timer {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--ff-heading);
+    font-size: 0.88rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.5px;
+  }
+
+  .sticky-timer-label {
+    font-size: 0.82rem;
+  }
+
   .section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 
   .hero-section {
-    padding: 2.2rem 0 3.5rem;
+    padding: 2rem 0 3rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .tag-hero {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.85rem;
+    margin: 0 auto 1.2rem;
   }
 
   .hero-title {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    text-align: center;
   }
 
   .hero-description {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-badges {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 0.6rem;
   }
 
   .badge-item {
-    justify-content: flex-start;
+    justify-content: center;
+    font-size: 0.88rem;
+    padding: 0.55rem 0.9rem;
+    width: 100%;
+  }
+
+  .hero-cta-box {
+    text-align: center;
   }
 
   .btn-hero-whatsapp {
     width: 100%;
     justify-content: center;
+    font-size: 1rem;
+    padding: 0.95rem 1.25rem;
   }
 
   .lead-form-card {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1.1rem;
   }
 
   .form-title {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
+  }
+
+  .form-subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 16px; /* Avoid iOS auto-zoom */
+    padding: 0.75rem 0.9rem;
   }
 
   .timer-pill-box {
     min-width: 44px;
-    padding: 0.3rem 0.45rem;
+    padding: 0.3rem 0.4rem;
   }
 
   .timer-pill-value {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
-  .stats-divider {
-    display: none;
+  .stat-divider {
+    display: none !important;
   }
 
   .stats-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .stat-item {
+    text-align: center;
+    width: 100%;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.88rem;
   }
 
   .plants-grid {
@@ -1611,60 +1857,166 @@ h1, h2, h3, h4 {
     gap: 1.5rem;
   }
 
-  .mcmv-open-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  .plant-body {
+    padding: 1.25rem;
   }
 
-  .location-distances-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-
-  .btn-gold-lg,
-  .btn-submit-whatsapp,
-  .btn-faq-whatsapp {
+  .plant-body .btn {
     width: 100%;
     justify-content: center;
   }
 
-  .sticky-mobile-bar {
-    display: flex;
+  .leisure-card-box {
+    padding: 1.35rem 1.1rem;
   }
 
-  body {
-    padding-bottom: 60px;
+  .leisure-card-box .btn-card-navy {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mcmv-open-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .mcmv-card {
+    padding: 1.35rem 1.1rem;
+  }
+
+  .location-distances-grid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .distance-card {
+    padding: 1.15rem;
+    gap: 0.9rem;
+  }
+
+  .location-callout {
+    padding: 1.5rem 1rem;
+  }
+
+  .location-callout .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .section-desc {
+    font-size: 0.98rem;
+  }
+
+  .faq-question {
+    padding: 1rem 1.15rem;
+    font-size: 0.98rem;
+  }
+
+  .faq-answer {
+    padding: 0 1.15rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+  }
+
+  .btn-gold-lg,
+  .btn-submit-whatsapp,
+  .btn-green-lg {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
   }
 }
 
 /* Small Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
   .container {
-    padding: 0 1rem;
-  }
-
-  .hero-title {
-    font-size: 1.75rem;
+    padding: 0 0.9rem;
   }
 
   .brand-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
-  .header-cta .btn-whatsapp-header {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.82rem;
+  .brand-sub {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+  }
+
+  .whatsapp-btn-text {
+    display: inline;
+  }
+
+  .btn-whatsapp-header {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border-radius: 2rem;
+    white-space: nowrap;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .sticky-countdown-bar {
+    top: 60px;
+  }
+
+  .sticky-timer .timer-pill-box.sm {
+    min-width: 36px;
+    height: 34px;
+    padding: 0.15rem 0.25rem;
+  }
+
+  .sticky-timer .timer-pill-value {
+    font-size: 0.85rem;
+  }
+
+  .sticky-timer .timer-pill-unit {
+    font-size: 0.45rem;
+  }
+
+  .sticky-timer .timer-pill-colon {
+    font-size: 0.85rem;
+    height: 34px;
+  }
+
+  .timer-pill-box {
+    min-width: 42px;
+    height: 42px;
+    padding: 0.25rem 0.35rem;
+  }
+
+  .timer-pill-value {
+    font-size: 0.95rem;
+  }
+
+  .timer-pill-unit {
+    font-size: 0.55rem;
+  }
+
+  .timer-pill-colon {
+    font-size: 0.95rem;
+    height: 42px;
   }
 
   .mcmv-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem 1rem;
   }
 
-  .faq-cta-box {
-    padding: 1.5rem 1rem;
+  .mcmv-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .distance-card h4 {
+    font-size: 1rem;
   }
 }
