@@ -69,12 +69,24 @@ html {
   font-size: 16px;
 }
 
+/* Zero CLS - Layout Shift Prevention & Icon Reservations */
+i.fa-solid, i.fa-regular, i.fa-brands, .fa {
+  display: inline-block;
+  min-width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  box-sizing: content-box;
+  vertical-align: -0.125em;
+}
+
 body {
   font-family: var(--ff-body);
   color: var(--clr-text-main);
   background-color: var(--clr-bg-page);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -400,9 +412,11 @@ h1, h2, h3, h4 {
   background: var(--clr-brand-navy);
   border-radius: 0.5rem;
   padding: 0.35rem 0.6rem;
-  min-width: 52px;
+  min-width: 54px;
+  min-height: 44px;
   text-align: center;
   box-shadow: var(--shadow-sm);
+  font-variant-numeric: tabular-nums;
 }
 
 .timer-pill-value {
@@ -412,6 +426,7 @@ h1, h2, h3, h4 {
   font-weight: 900;
   color: #FFFFFF;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .timer-pill-unit {
