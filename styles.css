@@ -85,6 +85,46 @@ html {
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
 }
 
+/* Minimal Inlined FontAwesome CSS Rules (Zero Unused CSS Payload - 100% Used) */
+.fa-brands, .fa-solid { font-style: normal; font-variant: normal; line-height: 1; text-rendering: auto; -webkit-font-smoothing: antialiased; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.fa-brands { font-family: "Font Awesome 6 Brands"; font-weight: 400; }
+
+.fa-whatsapp::before { content: "\f232"; }
+.fa-city::before { content: "\f64f"; }
+.fa-file-invoice-dollar::before { content: "\f571"; }
+.fa-calendar-check::before { content: "\f274"; }
+.fa-shield-halved::before { content: "\f3ed"; }
+.fa-stopwatch::before { content: "\f2f2"; }
+.fa-water-ladder::before { content: "\f5c5"; }
+.fa-table-tennis-paddle-ball::before { content: "\f45d"; }
+.fa-person-swimming::before { content: "\f5c4"; }
+.fa-utensils::before { content: "\f2e7"; }
+.fa-dumbbell::before { content: "\f44b"; }
+.fa-laptop-house::before { content: "\e066"; }
+.fa-dog::before { content: "\f6d3"; }
+.fa-cart-shopping::before { content: "\f07a"; }
+.fa-compass-drafting::before { content: "\f568"; }
+.fa-layer-group::before { content: "\f5fd"; }
+.fa-sliders::before { content: "\f1de"; }
+.fa-wind::before { content: "\f72e"; }
+.fa-sink::before { content: "\e06d"; }
+.fa-droplet::before { content: "\f043"; }
+.fa-faucet-drip::before { content: "\e006"; }
+.fa-hand-holding-dollar::before { content: "\f4c0"; }
+.fa-vault::before { content: "\e2c5"; }
+.fa-users::before { content: "\f0c0"; }
+.fa-location-dot::before { content: "\f3c5"; }
+.fa-location-arrow::before { content: "\f124"; }
+.fa-shop::before { content: "\f54f"; }
+.fa-bag-shopping::before { content: "\f290"; }
+.fa-graduation-cap::before { content: "\f19d"; }
+.fa-tree::before { content: "\f1bb"; }
+.fa-bus::before { content: "\f207"; }
+.fa-box::before { content: "\f466"; }
+.fa-map-location-dot::before { content: "\f5a0"; }
+.fa-angle-down::before { content: "\f107"; }
+.fa-pen::before { content: "\f304"; }
+
 /* Zero CLS - Layout Shift Prevention & Icon Reservations */
 i.fa-solid, i.fa-regular, i.fa-brands, .fa {
   display: inline-block;
