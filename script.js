@@ -140,12 +140,17 @@ function initApp() {
           mode: 'no-cors'
         });
 
-        // Trigger Google Ads Data Layer Event
+        // Trigger Google Ads & Data Layer Event
         if (window.dataLayer) {
           window.dataLayer.push({
             'event': 'lead_conversion',
             'form_name': 'LancamentoUrbanVilaGuilherme',
             'contact_time': horario
+          });
+        }
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17119916987'
           });
         }
 
