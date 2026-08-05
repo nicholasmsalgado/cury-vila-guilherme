@@ -150,7 +150,7 @@ function initApp() {
         }
 
         // WhatsApp redirect message
-        const messageText = `Olá! Vim através do site do Urban Vila Guilherme e gostaria de receber a apresentação e a tabela oficial de lançamento MCMV.\n\n` +
+        const messageText = `Olá! Vim através do site oficial do Urban Vila Guilherme e gostaria de receber a apresentação e a tabela de preços do lançamento.\n\n` +
                             `👤 Nome: ${nome}\n` +
                             `✉️ E-mail: ${email}\n` +
                             `📱 WhatsApp: ${whatsapp}\n` +
