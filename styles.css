@@ -45,9 +45,9 @@
   --clr-border-highlight: #CBD5E1;
   --clr-tag-bg: #F1F5F9;
 
-  /* Fonts - Inter / Outfit (Títulos Neo-Grotescos Neo-Swiss estilo Methane) */
-  --ff-heading: 'Inter', 'Outfit', 'Plus Jakarta Sans', -apple-system, sans-serif;
-  --ff-body: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  /* Fonts - Montserrat (Fonte Geométrica Oficial do Book Urban) + Plus Jakarta Sans */
+  --ff-heading: 'Montserrat', 'Inter', sans-serif;
+  --ff-body: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
 
   /* Shadows Sóbrias */
   --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.04);
