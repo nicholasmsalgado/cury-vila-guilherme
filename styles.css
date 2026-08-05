@@ -2179,64 +2179,33 @@ body {
 
 .lightbox-close {
   position: absolute;
-  top: 20px;
-  right: 25px;
+  top: 15px;
+  right: 20px;
   color: #FFFFFF;
-  font-size: 44px;
-  font-weight: 900;
+  font-size: 1.5rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   cursor: pointer;
   z-index: 10000;
-  line-height: 1;
-  width: 50px;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
   transition: all 0.2s ease;
+  padding: 0;
 }
 
 .lightbox-close:hover {
   background: var(--clr-brand-lime);
   color: #FFFFFF;
+  border-color: var(--clr-brand-lime);
   transform: scale(1.1);
 }
 
-/* Pointer feedback on clickable images */
+/* Pointer cursor on clickable images */
 .plant-img-wrapper,
 .leisure-photo-thumb {
   cursor: pointer;
-  position: relative;
-}
-
-.plant-img-wrapper::after,
-.leisure-photo-thumb::after {
-  content: '\f00e';
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 900;
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(15, 44, 89, 0.85);
-  color: #78C027;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  opacity: 0.85;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.plant-card:hover .plant-img-wrapper::after,
-.leisure-photo-card:hover .leisure-photo-thumb::after {
-  opacity: 1;
-  transform: scale(1.15);
-  background: var(--clr-brand-lime);
-  color: #FFFFFF;
 }
