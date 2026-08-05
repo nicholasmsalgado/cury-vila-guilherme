@@ -14,6 +14,7 @@ function initApp() {
 
   function updateCountdown() {
     const daysEl = document.getElementById('days');
+    if (!daysEl && !document.getElementById('days-sticky')) return;
     const hoursEl = document.getElementById('hours');
     const minutesEl = document.getElementById('minutes');
     const secondsEl = document.getElementById('seconds');
