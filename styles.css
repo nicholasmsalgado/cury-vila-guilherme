@@ -2118,10 +2118,11 @@ body {
   }
 }
 
-/* Hide map pin icon on mobile */
+/* Hide elements on mobile */
 @media (max-width: 768px) {
   .location-seo-content h3 .fa-location-dot,
-  .location-callout .fa-map-location-dot {
+  .location-callout .fa-map-location-dot,
+  .form-launch-box {
     display: none !important;
   }
 }
