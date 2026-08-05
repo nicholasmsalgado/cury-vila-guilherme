@@ -252,6 +252,56 @@ function initApp() {
     });
   }
 
+  // 7. LIGHTBOX IMAGE ZOOM MODAL
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  const clickableImages = document.querySelectorAll('.plant-img-wrapper img, .leisure-photo-thumb img');
+
+  clickableImages.forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (lightbox && lightboxImg) {
+        lightboxImg.src = this.src;
+        lightboxImg.alt = this.alt;
+        if (lightboxCaption) {
+          lightboxCaption.innerText = this.alt || 'Urban Vila Guilherme';
+        }
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightboxModal() {
+    if (lightbox) {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightboxModal);
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox || e.target === lightboxClose) {
+        closeLightboxModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeLightboxModal();
+    }
+  });
+
 }
 
 if (document.readyState === 'loading') {
