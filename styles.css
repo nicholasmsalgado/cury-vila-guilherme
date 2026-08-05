@@ -4,7 +4,7 @@
    Fontes: Outfit (Gordinha / ExtraBold) + DM Sans
    ========================================================================== */
 
-/* 1. Design Tokens & Variables (Paleta Imobiliária Autêntica) */
+/* 1. Design Tokens & Variables (Paleta Oficial URBAN Vila Guilherme) */
 :root {
   /* Fundo 100% Branco Unificado */
   --clr-bg-page: #FFFFFF;
@@ -13,20 +13,25 @@
   --clr-surface-alt: #FFFFFF;
   --clr-surface-white: #FFFFFF;
 
-  /* Cor Primária - Azul Marinho Nobre */
+  /* Cor do Book - Verde Lime URBAN */
+  --clr-brand-lime: #78C027;
+  --clr-brand-lime-hover: #62A01E;
+  --clr-brand-lime-bg: #F4FCE8;
+
+  /* Cor Primária - Azul Marinho / Grafite Urban */
   --clr-brand-navy: #0F2C59;
   --clr-brand-navy-hover: #071731;
-  --clr-brand-orange: #0F2C59;
-  --clr-brand-orange-hover: #071731;
+  --clr-brand-orange: #78C027;
+  --clr-brand-orange-hover: #62A01E;
   
-  /* Cor de Destaque - Dourado / Amarelo Sábrio */
-  --clr-accent-gold: #B45309;
-  --clr-accent-gold-hover: #92400E;
-  --clr-accent-gold-bg: #FEF3C7;
-  --clr-brand-teal: #0F2C59;
-  --clr-brand-teal-dark: #0F2C59;
+  /* Cor de Destaque */
+  --clr-accent-gold: #78C027;
+  --clr-accent-gold-hover: #62A01E;
+  --clr-accent-gold-bg: #F4FCE8;
+  --clr-brand-teal: #78C027;
+  --clr-brand-teal-dark: #62A01E;
 
-  /* WhatsApp / Sucesso */
+  /* WhatsApp / Sucesso (Verde Lime do Book) */
   --clr-primary-green: #15803D;
 
   /* Texto e UI Secundária (Preto Suave e Cinza Escuro) */

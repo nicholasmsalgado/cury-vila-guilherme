@@ -125,7 +125,7 @@ function initApp() {
         telefone: whatsapp,
         email: email,
         mensagem: `Melhor horário para contato: ${horario}`,
-        origem: "Site - Residencial Amadeu Vila Guilherme",
+        origem: "Site - Urban Vila Guilherme",
         aba: "Cury Vila Guilherme"
       };
 
@@ -144,13 +144,13 @@ function initApp() {
         if (window.dataLayer) {
           window.dataLayer.push({
             'event': 'lead_conversion',
-            'form_name': 'PreLancamentoAmadeu',
+            'form_name': 'LancamentoUrbanVilaGuilherme',
             'contact_time': horario
           });
         }
 
         // WhatsApp redirect message
-        const messageText = `Olá! Vim através do site do Residencial Amadeu Vila Guilherme e gostaria de receber a apresentação e as condições exclusivas de pré-lançamento MCMV.\n\n` +
+        const messageText = `Olá! Vim através do site do Urban Vila Guilherme e gostaria de receber a apresentação e a tabela oficial de lançamento MCMV.\n\n` +
                             `👤 Nome: ${nome}\n` +
                             `✉️ E-mail: ${email}\n` +
                             `📱 WhatsApp: ${whatsapp}\n` +
@@ -168,7 +168,7 @@ function initApp() {
         console.error('Erro ao enviar dados para o Webhook do Google Sheets:', error);
         alert('Ocorreu um pequeno erro ao enviar para a planilha, mas vamos te direcionar para o atendimento no WhatsApp.');
 
-        const messageText = `Olá! Gostaria de receber informações sobre o Residencial Amadeu Vila Guilherme.\n\n` +
+        const messageText = `Olá! Gostaria de receber informações sobre o Urban Vila Guilherme.\n\n` +
                             `👤 Nome: ${nome}\n` +
                             `✉️ E-mail: ${email}\n` +
                             `📱 WhatsApp: ${whatsapp}`;
